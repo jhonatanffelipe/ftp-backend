@@ -48,6 +48,8 @@ export default class SessionService {
 
     await userSessionRepository.insertUserSession(userSession);
 
+    await userSessionRepository.deleteExpiredSessionsByUserId(user.id!);
+
     return token;
   }
 }

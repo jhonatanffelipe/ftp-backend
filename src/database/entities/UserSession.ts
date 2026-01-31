@@ -1,15 +1,16 @@
+import moment from "moment";
 import { randomUUID } from "node:crypto";
 
 export default class UserSession {
   id?: string;
   userId: string;
   token: string;
-  createdAt?: Date;
+  createdAt?: string;
 
-  constructor({ userId, token, createdAt, id }: UserSession) {
+  constructor({ userId, token, id }: UserSession) {
     this.userId = userId;
     this.token = token;
-    this.createdAt = createdAt ?? new Date();
+    this.createdAt = moment().toISOString();
     this.id = id ?? randomUUID();
   }
 }

@@ -37,4 +37,15 @@ export default class UserSessionRepository {
       ],
     );
   };
+
+  public deleteExpiredSessionsByUserId = async (
+    userId: string,
+  ): Promise<void> => {
+    const database = await db;
+
+    await database.run(
+      "DELETE FROM userSessions WHERE userId = ? AND datetime(createdAt, '+1 day') <= datetime('now')",
+      [userId],
+    );
+  };
 }
