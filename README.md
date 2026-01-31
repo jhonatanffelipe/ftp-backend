@@ -10,7 +10,7 @@ Backend Node.js/TypeScript para armazenamento de arquivos em servidor FTP com Ex
 
 1. Clone o repositório:
    ```sh
-   git clone <repo-url>
+   git clone https://github.com/jhonatanffelipe/ftp-backend
    cd ftp-backend
    ```
 2. Instale as dependências:
