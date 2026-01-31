@@ -1,10 +1,10 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-import UsersRepository from "../database/repositories/UserRepository";
-import { AppError } from "../error/AppError";
-import UserSessionRepository from "../database/repositories/UserSessionRepository";
+import { AppError } from "../shared/error/AppError";
 import UserSession from "../database/entities/UserSession";
+import UsersRepository from "../database/repositories/UserRepository";
+import UserSessionRepository from "../database/repositories/UserSessionRepository";
 
 interface LoginParams {
   username: string;

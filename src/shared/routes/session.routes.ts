@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { createSessionSchema } from "../schemas/schemas";
 import { requestValidation } from "../middlewares/requestValidation";
-import SessionController from "../controllers/SessionController";
+import SessionController from "../../controllers/SessionController";
+import { createSessionSchema } from "../../schemas/schemas";
 
 const sessionController = new SessionController();
 

@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 
 import UsersRepository from "../database/repositories/UserRepository";
 import User from "../database/entities/User";
-import { AppError } from "../error/AppError";
+import { AppError } from "../shared/error/AppError";
 
 interface LoginParams {
   username: string;

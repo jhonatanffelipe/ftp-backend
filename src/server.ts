@@ -1,9 +1,9 @@
 import "dotenv/config";
 
 import express from "express";
-import { initDatabase } from "./database/initDatabase";
-import { ErrorHandler } from "./error/ErrorHandler";
-import routes from "./routes/index.routes";
+import { initDatabase } from "./shared/database/initDatabase";
+import { ErrorHandler } from "./shared/error/ErrorHandler";
+import routes from "./shared/routes/index.routes";
 
 const app = express();
 app.use(express.json());

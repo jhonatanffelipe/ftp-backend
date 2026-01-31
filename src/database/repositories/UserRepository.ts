@@ -1,4 +1,4 @@
-import { db } from "../../database/db";
+import { db } from "../../shared/database/db";
 import User from "../entities/User";
 
 export default class UsersRepository {

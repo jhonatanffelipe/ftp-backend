@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import { AppError } from "../error/AppError";
-import UserSessionRepository from "../database/repositories/UserSessionRepository";
+import UserSessionRepository from "../../database/repositories/UserSessionRepository";
 
 export async function isAuthenticated(
   request: Request,
